@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gB2-W0-nXb">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gB2-W0-nXb">
                                 <rect key="frame" x="0.0" y="686" width="414" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -39,18 +40,21 @@
                                     <action selector="sendEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eYj-g8-1Eq"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cW6-uc-oUC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="408"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cW6-uc-oUC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDb-cV-tNg">
-                                <rect key="frame" x="362" y="649" width="50" height="35"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljL-f9-Jto">
+                                <rect key="frame" x="20" y="20" width="65" height="35"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="G4h-DZ-wmu"/>
-                                    <constraint firstAttribute="width" constant="50" id="XqG-Js-R1s"/>
+                                    <constraint firstAttribute="width" constant="65" id="8Wb-wN-RCe"/>
+                                    <constraint firstAttribute="height" constant="35" id="Oee-an-1SV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Help"/>
+                                <state key="normal" title="SWSP">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.makesToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -58,11 +62,32 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="f8w-il-U6f" kind="show" id="pix-UH-KBf"/>
+                                    <segue destination="3Nf-v8-PlN" kind="show" id="oNU-dg-4P3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtV-FT-zOV">
+                                <rect key="frame" x="20" y="63" width="50" height="35"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ILA-Qq-NLq"/>
+                                    <constraint firstAttribute="height" constant="35" id="xJk-Gy-2VR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.makesToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="f8w-il-U6f" kind="show" id="e78-OC-E5E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkM-cw-aao">
-                                <rect key="frame" x="284" y="648" width="70" height="36"/>
+                                <rect key="frame" x="324" y="641" width="70" height="35"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="FPV-ck-R9R"/>
@@ -82,17 +107,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="cW6-uc-oUC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3w5-cj-jff"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gB2-W0-nXb" secondAttribute="bottom" id="5bN-XA-W9B"/>
-                            <constraint firstAttribute="trailing" secondItem="gB2-W0-nXb" secondAttribute="trailing" id="SJQ-Ns-l6b"/>
-                            <constraint firstItem="gB2-W0-nXb" firstAttribute="top" secondItem="cW6-uc-oUC" secondAttribute="bottom" id="TRa-vl-wGO"/>
-                            <constraint firstItem="cW6-uc-oUC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VT4-Za-hBA"/>
-                            <constraint firstAttribute="trailing" secondItem="cW6-uc-oUC" secondAttribute="trailing" id="YZP-gF-e2M"/>
-                            <constraint firstItem="gB2-W0-nXb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gPz-8t-oT6"/>
-                            <constraint firstItem="gB2-W0-nXb" firstAttribute="top" secondItem="UDb-cV-tNg" secondAttribute="bottom" constant="2" id="swD-RR-7Tn"/>
-                            <constraint firstAttribute="trailing" secondItem="UDb-cV-tNg" secondAttribute="trailing" constant="2" id="zgV-cX-9YD"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="theMap" destination="cW6-uc-oUC" id="ega-BY-wVM"/>
@@ -221,8 +235,116 @@
             </objects>
             <point key="canvasLocation" x="892.75362318840587" y="124.72826086956523"/>
         </scene>
+        <!--View ControllerSWSP-->
+        <scene sceneID="Wy6-vY-oTg">
+            <objects>
+                <viewController id="3Nf-v8-PlN" customClass="ViewController_SWSP" customModule="govHack2017" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iz4-J4-2Gc"/>
+                        <viewControllerLayoutGuide type="bottom" id="gAA-BR-qtw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rPd-cF-BPw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKF-6w-c7L">
+                                <rect key="frame" x="145" y="701" width="125" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="teD-2K-VCP"/>
+                                    <constraint firstAttribute="height" constant="30" id="uxE-Mh-kyI"/>
+                                </constraints>
+                                <state key="normal" title="Back to Map"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Ls6-OO-8o4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S W S P" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vc-Ax-2Lz">
+                                <rect key="frame" x="107" y="25" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HaY-pr-hak"/>
+                                    <constraint firstAttribute="width" constant="200" id="SFg-ox-4Jn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q5g-UD-efQ">
+                                <rect key="frame" x="50" y="268" width="314" height="114"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="61J-Iz-PU1"/>
+                                </constraints>
+                                <string key="text">Our group SWSP contains six Canberra Grammar School students, who have spent the past several years studying Information Technology. We all attend Code Cadets which has provided us with the skills necessary to complete GovHack 2017.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Team:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6U3-vT-lJu">
+                                <rect key="frame" x="159" y="80" width="97" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="2F6-YK-luw"/>
+                                    <constraint firstAttribute="height" constant="40" id="I01-Tt-Moz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The App:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUZ-Cr-mGn">
+                                <rect key="frame" x="159" y="390" width="97" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="irt-4F-QcA"/>
+                                    <constraint firstAttribute="width" constant="97" id="pd3-aS-MQe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kig-MG-NsK">
+                                <rect key="frame" x="30" y="435" width="354" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">‘Lights Out’ is an ios application created by SWSP in order to report issues involving public lighting throughout Canberra. One of the biggest problems challenging people’s perceived safety throughout Canberra is the amount of light in its public places, or lack thereof. 
+
+From data collected by the ACT Government the amount of light in an area may not be related to its actual safety. Regardless of this however, we want Canberra to be a place where everyone can feel safe. Our mission is to make an application that allows people either from or visiting Canberra to report an issue with public light fixtures.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p2s-mt-KS5">
+                                <rect key="frame" x="85" y="125" width="244" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="ViB-eF-5Zr"/>
+                                    <constraint firstAttribute="height" constant="100" id="p0Q-0u-2Ih"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p2s-mt-KS5" firstAttribute="top" secondItem="6U3-vT-lJu" secondAttribute="bottom" constant="5" id="1Wp-Zc-6Rt"/>
+                            <constraint firstItem="iUZ-Cr-mGn" firstAttribute="top" secondItem="Q5g-UD-efQ" secondAttribute="bottom" constant="10" id="8Fs-Vr-oGC"/>
+                            <constraint firstItem="1vc-Ax-2Lz" firstAttribute="centerX" secondItem="rPd-cF-BPw" secondAttribute="centerX" id="8Li-pN-yxq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q5g-UD-efQ" secondAttribute="trailing" constant="30" id="DPe-SE-t6s"/>
+                            <constraint firstItem="6U3-vT-lJu" firstAttribute="top" secondItem="1vc-Ax-2Lz" secondAttribute="bottom" constant="5" id="GP7-BQ-G50"/>
+                            <constraint firstItem="6U3-vT-lJu" firstAttribute="centerX" secondItem="rPd-cF-BPw" secondAttribute="centerX" id="Odt-5c-bIk"/>
+                            <constraint firstItem="kig-MG-NsK" firstAttribute="leading" secondItem="rPd-cF-BPw" secondAttribute="leading" constant="30" id="SkS-FV-KTY"/>
+                            <constraint firstItem="1vc-Ax-2Lz" firstAttribute="top" secondItem="iz4-J4-2Gc" secondAttribute="bottom" constant="5" id="baQ-d1-Gy4"/>
+                            <constraint firstItem="kig-MG-NsK" firstAttribute="top" secondItem="iUZ-Cr-mGn" secondAttribute="bottom" constant="5" id="byj-S1-4W0"/>
+                            <constraint firstItem="gAA-BR-qtw" firstAttribute="top" secondItem="rKF-6w-c7L" secondAttribute="bottom" constant="5" id="ctn-0q-cVX"/>
+                            <constraint firstItem="rKF-6w-c7L" firstAttribute="top" secondItem="kig-MG-NsK" secondAttribute="bottom" constant="10" id="h9B-rH-V2L"/>
+                            <constraint firstAttribute="trailing" secondItem="kig-MG-NsK" secondAttribute="trailing" constant="30" id="kYF-yH-awX"/>
+                            <constraint firstItem="iUZ-Cr-mGn" firstAttribute="centerX" secondItem="rPd-cF-BPw" secondAttribute="centerX" id="nRi-WV-hCy"/>
+                            <constraint firstItem="kig-MG-NsK" firstAttribute="centerX" secondItem="rPd-cF-BPw" secondAttribute="centerX" id="r2h-ps-2Na"/>
+                            <constraint firstItem="Q5g-UD-efQ" firstAttribute="top" secondItem="p2s-mt-KS5" secondAttribute="bottom" constant="5" id="tun-Ny-PNf"/>
+                            <constraint firstItem="rKF-6w-c7L" firstAttribute="centerX" secondItem="rPd-cF-BPw" secondAttribute="centerX" id="uQG-R2-zEL"/>
+                            <constraint firstItem="Q5g-UD-efQ" firstAttribute="centerX" secondItem="rPd-cF-BPw" secondAttribute="centerX" id="xy0-vV-uTk"/>
+                            <constraint firstItem="Q5g-UD-efQ" firstAttribute="leading" secondItem="rPd-cF-BPw" secondAttribute="leadingMargin" constant="30" id="xzm-7g-vk8"/>
+                            <constraint firstItem="p2s-mt-KS5" firstAttribute="centerX" secondItem="rPd-cF-BPw" secondAttribute="centerX" id="yAy-8a-q8z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJi-Gc-DMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1621.7391304347827" y="131.25"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CsG-kg-tNR"/>
+        <segue reference="tcg-Qz-UMJ"/>
     </inferredMetricsTieBreakers>
 </document>

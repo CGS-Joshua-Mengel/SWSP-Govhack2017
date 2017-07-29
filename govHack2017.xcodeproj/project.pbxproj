@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A93D20361F2C7B3D00BDEB19 /* ViewController-SWSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93D20351F2C7B3D00BDEB19 /* ViewController-SWSP.swift */; };
 		A9B409671F2B3BB400C22647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B409661F2B3BB400C22647 /* AppDelegate.swift */; };
 		A9B409691F2B3BB400C22647 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B409681F2B3BB400C22647 /* ViewController.swift */; };
 		A9B4096C1F2B3BB400C22647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B4096A1F2B3BB400C22647 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A93D20351F2C7B3D00BDEB19 /* ViewController-SWSP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController-SWSP.swift"; sourceTree = "<group>"; };
 		A9B409631F2B3BB400C22647 /* govHack2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = govHack2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B409661F2B3BB400C22647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9B409681F2B3BB400C22647 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				A9B409681F2B3BB400C22647 /* ViewController.swift */,
 				A9E70E301F2C4B2000A2ACBC /* ViewController-camera.swift */,
 				A9B4096A1F2B3BB400C22647 /* Main.storyboard */,
+				A93D20351F2C7B3D00BDEB19 /* ViewController-SWSP.swift */,
 				A9B4097A1F2B4D2000C22647 /* ViewController-about.swift */,
 				A9B409661F2B3BB400C22647 /* AppDelegate.swift */,
 				A9B4096D1F2B3BB400C22647 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93D20361F2C7B3D00BDEB19 /* ViewController-SWSP.swift in Sources */,
 				A9B4097B1F2B4D2000C22647 /* ViewController-about.swift in Sources */,
 				A9B409691F2B3BB400C22647 /* ViewController.swift in Sources */,
 				A9B409671F2B3BB400C22647 /* AppDelegate.swift in Sources */,
