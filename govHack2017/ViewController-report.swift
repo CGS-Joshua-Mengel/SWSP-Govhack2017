@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import MessageUI
 
-class ViewController_report: UIViewController {
-
+class ViewController_report: UIViewController, MFMailComposeViewControllerDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +22,47 @@ class ViewController_report: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func sendEmail(_ sender: Any) {
+        
+        let mailComposeViewController = configureMailController()
+        
+        if MFMailComposeViewController.canSendMail() {
+            
+            self.present(mailComposeViewController, animated: true, completion: nil)
+            
+        } else {
+            
+            showReportError()
+            
+        }
+        
     }
-    */
-
+    
+    func configureMailController() -> MFMailComposeViewController {
+        
+        let reportEmailVC = MFMailComposeViewController()
+        reportEmailVC.mailComposeDelegate = self
+        reportEmailVC.setToRecipients(["edanreynolds@gmail.com"])
+        reportEmailVC.setSubject("Report Email")
+        reportEmailVC.setMessageBody("Test", isHTML: false)
+        
+        return reportEmailVC
+        
+    }
+    
+    func showReportError() {
+        
+        let sendMailErrorAlert = UIAlertController(title: "Could not send mail", message: "Your device could not send email", preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        sendMailErrorAlert.addAction(dismiss)
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
+        
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+        controller.dismiss(animated: true, completion: nil)
+        
+    }
+    
 }

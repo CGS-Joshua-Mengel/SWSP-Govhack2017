@@ -36,5 +36,11 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need your location, to find the nearest items to you.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need your location, to find the nearest items to you.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We need access to your camera so you can take photos in our app</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need to access your photos if you want to use an already taken photo</string>
 </dict>
 </plist>
